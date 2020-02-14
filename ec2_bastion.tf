@@ -6,7 +6,7 @@ module "bastion" {
   vpc_security_group_ids = [module.main-sg.this_security_group_id]
   subnet_id              = module.vpc01.public_subnets
   instance_type          = "t2.micro"
-  key_name               = aws_key_pair.devops.key_name
+  key_name               = aws_key_pair.my_key.key_name
   private_key            = file("~/.ssh/id_rsa")
   #ami_id =
   #ami_username = ""
