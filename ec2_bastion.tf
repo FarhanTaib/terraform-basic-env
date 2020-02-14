@@ -1,6 +1,6 @@
 module "bastion" {
   source                 = "./modules/multi_ec2"
-  instance_count         = 0
+  instance_count         = 3
   instance_name          = "bastion"
   r53_zone_id            = aws_route53_zone.main_private.zone_id
   vpc_security_group_ids = [module.main-sg.this_security_group_id]
